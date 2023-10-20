@@ -6,7 +6,7 @@
 /*   By: bhung-yi <bhung-yi@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 17:34:41 by bhung-yi          #+#    #+#             */
-/*   Updated: 2023/10/17 17:55:05 by bhung-yi         ###   ########.fr       */
+/*   Updated: 2023/10/19 18:46:16 by bhung-yi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ public:
     ~Fixed();
     Fixed(const Fixed &fixed);
     Fixed &operator=(const Fixed &fixed);
-
+    
     int getRawBits(void) const;
     void setRawBits(int const raw);
 };
