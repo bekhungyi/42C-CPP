@@ -1,17 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Phonebook.cpp                                      :+:      :+:    :+:   */
+/*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bhung-yi <bhung-yi@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 19:44:39 by bhung-yi          #+#    #+#             */
-/*   Updated: 2023/10/16 17:08:00 by bhung-yi         ###   ########.fr       */
+/*   Updated: 2023/10/21 13:50:36 by bhung-yi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Phonebook.hpp"
+#include "PhoneBook.hpp"
 #include <iomanip>
+
 
 void    PhoneBook::add(int  i)
 {
