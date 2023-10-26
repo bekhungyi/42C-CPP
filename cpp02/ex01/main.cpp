@@ -6,7 +6,7 @@
 /*   By: bhung-yi <bhung-yi@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 18:04:00 by bhung-yi          #+#    #+#             */
-/*   Updated: 2023/10/25 16:59:19 by bhung-yi         ###   ########.fr       */
+/*   Updated: 2023/10/25 17:27:38 by bhung-yi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,16 +28,16 @@
 
 int main(void)
 {
-    Fixed a; //1
-    Fixed b(a); //2,3,4
-    Fixed c; //5
-    c = b; //6,7
+    Fixed a;
+    Fixed b(42);
+    Fixed c(42.69f);
+    
     std::cout << a.getRawBits() << std::endl;
     std::cout << b.getRawBits() << std::endl;
     std::cout << c.getRawBits() << std::endl;
 
-    // a.setRawBits(10);
-    // std::cout << "newA: " << a.getRawBits() << std::endl;
-    // std::cout << "newB: " << b.getRawBits() << std::endl;
+    std::cout << b << std::endl;
+
+
     return 0;
 }
