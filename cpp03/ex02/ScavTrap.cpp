@@ -6,7 +6,7 @@
 /*   By: bhung-yi <bhung-yi@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 19:12:16 by bhung-yi          #+#    #+#             */
-/*   Updated: 2023/10/28 01:49:23 by bhung-yi         ###   ########.fr       */
+/*   Updated: 2023/10/28 01:47:23 by bhung-yi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,23 +36,24 @@ ScavTrap    &ScavTrap::operator=(ScavTrap &src)
 
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 {
-    std::cout << "ScavTrap constructor called" << std::endl;
+    this->name = name;
     this->hitPoints = 100;
     this->energyPoints = 50;
     this->attackDamage = 20;
+    std::cout << "(ScavTrap) " <<  this->name << " joins ScavTrap" << std::endl;
 }
 
 ScavTrap::~ScavTrap()
 {
-    std::cout << "ScavTrap destructor called" << std::endl;
+    std::cout << "(ScavTrap) " <<  this->name << " quits ScavTrap" << std::endl;
 }
 
 void    ScavTrap::guardGate()
 {
     if (this->hitPoints == 0)
-        std::cout << "(ScavTrap) " << this->name << " is already dead..." << std::endl;
+        std::cout << this->name << " is already dead..." << std::endl;
     else if (this->energyPoints == 0)
-        std::cout << "(ScavTrap) " << this->name << " has no energy left." << std::endl;
+        std::cout << this->name << " has no energy left." << std::endl;
     else
     {
         std::cout << "(ScavTrap) " << this->name << " is now in Gate keeper mode." << std::endl;

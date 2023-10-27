@@ -6,7 +6,7 @@
 /*   By: bhung-yi <bhung-yi@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 18:40:41 by bhung-yi          #+#    #+#             */
-/*   Updated: 2023/10/27 19:37:55 by bhung-yi         ###   ########.fr       */
+/*   Updated: 2023/10/27 19:52:52 by bhung-yi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ ClapTrap::ClapTrap(std::string name)
 {
     this->name = name;
     this->hitPoints = 10;
-    this->energyPoints = 5;
-    this->attackDamage = 1;
+    this->energyPoints = 10;
+    this->attackDamage = 0;
     std::cout << "ClapTrap " << this->name << " is created" << std::endl;
 }
 

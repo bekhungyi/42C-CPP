@@ -6,7 +6,7 @@
 /*   By: bhung-yi <bhung-yi@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 18:40:41 by bhung-yi          #+#    #+#             */
-/*   Updated: 2023/10/27 19:52:37 by bhung-yi         ###   ########.fr       */
+/*   Updated: 2023/10/28 01:48:17 by bhung-yi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,25 @@
 
 ClapTrap::ClapTrap()
 {
-    this->name = "defaultName";
+    this->name = "default";
     this->hitPoints = 10;
     this->energyPoints = 10;
     this->attackDamage = 0;
-    std::cout << "(ClapTrap) " << this->name << " is created" << std::endl;
+    std::cout << "(ClapTrap) " << this->name << " spawned" << std::endl;
 }
 
-ClapTrap::ClapTrap(std::string name)
+ClapTrap::ClapTrap(std::string &name)
 {
     this->name = name;
     this->hitPoints = 10;
     this->energyPoints = 10;
     this->attackDamage = 0;
-    std::cout << "(ClapTrap) " << this->name << " is created" << std::endl;
+    std::cout << "(ClapTrap) " << this->name << " spawned" << std::endl;
 }
 
 ClapTrap::~ClapTrap()
 {
-    std::cout << "(ClapTrap) " << this->name << " is destroyed" << std::endl;
+    std::cout << "(ClapTrap) " << this->name << " despawned" << std::endl;
 }
 
 ClapTrap::ClapTrap(ClapTrap &src)
@@ -51,20 +51,20 @@ ClapTrap	&ClapTrap::operator=(ClapTrap &src)
 
 void ClapTrap::attack(const std::string& target)
 {
-    if (this->energyPoints == 0)
+    if (this->hitPoints == 0)
     {
-        std::cout << "ClapTrap " << this->name << " has no energy points to attack!" << std::endl;
+        std::cout << this->name << " is already dead..." << std::endl;
         return ;
     }
-    else if (this->hitPoints == 0)
+    else if (this->energyPoints == 0)
     {
-        std::cout << "ClapTrap " << this->name << " is already dead..." << std::endl;
+        std::cout << this->name << " has no energy points to attack!" << std::endl;
         return ;
     }
     else
         this->energyPoints--;
     
-    std::cout << "ClapTrap " << this->name << " attack " << target << ", causing " << this->attackDamage << " points of damage!" << std::endl;
+    std::cout << this->name << " attack " << target << ", causing " << this->attackDamage << " points of damage!" << std::endl;
 }
 
 void ClapTrap::takeDamage(unsigned int amount)
