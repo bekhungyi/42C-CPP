@@ -6,7 +6,7 @@
 /*   By: bhung-yi <bhung-yi@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 17:34:41 by bhung-yi          #+#    #+#             */
-/*   Updated: 2023/10/25 17:53:38 by bhung-yi         ###   ########.fr       */
+/*   Updated: 2023/10/27 15:18:06 by bhung-yi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,6 @@ public:
     int toInt( void ) const;
 };
 
-std::ostream	&operator<<(std::ostream &str, Fixed const &fixed_nbr);
+std::ostream	&operator<<(std::ostream &str, Fixed const &fixedNum);
 
 #endif
