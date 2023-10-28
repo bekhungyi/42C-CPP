@@ -6,7 +6,7 @@
 #    By: bhung-yi <bhung-yi@student.42kl.edu.my>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/13 15:27:20 by bhung-yi          #+#    #+#              #
-#    Updated: 2023/10/28 03:52:20 by bhung-yi         ###   ########.fr        #
+#    Updated: 2023/10/28 16:49:13 by bhung-yi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ GREEN	= \033[0;32m
 WHITE	= \033[0;37m
 
 NAME	= zoo
-SRC 	= main Animal
+SRC 	= main Animal Cat Dog WrongAnimal WrongCat
 
 CC		= g++
 FLAGS	= -Wall -Wextra -Werror -std=c++98 -pedantic -fsanitize=address

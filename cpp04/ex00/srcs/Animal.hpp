@@ -6,7 +6,7 @@
 /*   By: bhung-yi <bhung-yi@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 03:02:18 by bhung-yi          #+#    #+#             */
-/*   Updated: 2023/10/28 03:49:55 by bhung-yi         ###   ########.fr       */
+/*   Updated: 2023/10/28 16:33:24 by bhung-yi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,19 @@
 
 #include <iostream>
 
-int woof();
+class Animal
+{
+    public:
+        Animal();
+        ~Animal();
+        Animal(const Animal &src);
+        Animal &operator=(const Animal &src);
+        std::string    getType() const;
+
+        virtual void makeSound() const;
+        
+    protected:
+        std::string type;
+};
 
 #endif
