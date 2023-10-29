@@ -6,7 +6,7 @@
 /*   By: bhung-yi <bhung-yi@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 17:08:23 by bhung-yi          #+#    #+#             */
-/*   Updated: 2023/10/28 17:26:52 by bhung-yi         ###   ########.fr       */
+/*   Updated: 2023/10/29 19:10:34 by bhung-yi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,10 +42,10 @@ void    Brain::setIdea(int i,std::string idea)
         return;
 }
 
-std::string Brain::getIdea(int i)
+const std::string &Brain::getIdea(int i) const
 {
     if (i >= 0 && i < 100)
         return(this->ideas[i]);
     else
-        return 0;
+        return (this->ideas[0]);
 }

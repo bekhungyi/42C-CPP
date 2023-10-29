@@ -6,7 +6,7 @@
 /*   By: bhung-yi <bhung-yi@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 17:08:31 by bhung-yi          #+#    #+#             */
-/*   Updated: 2023/10/28 18:17:48 by bhung-yi         ###   ########.fr       */
+/*   Updated: 2023/10/29 19:05:26 by bhung-yi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class Brain
         Brain   &operator=(const Brain &src);
 
         void    setIdea(int i, std::string idea);
-        std::string getIdea(int i);
+        const std::string &getIdea(int i) const;
 
         std::string* getIdeasAddress() {
         return ideas;

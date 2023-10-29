@@ -6,7 +6,7 @@
 /*   By: bhung-yi <bhung-yi@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 02:47:42 by bhung-yi          #+#    #+#             */
-/*   Updated: 2023/10/28 18:44:40 by bhung-yi         ###   ########.fr       */
+/*   Updated: 2023/10/29 19:13:29 by bhung-yi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ void testDeepCopy() {
 
 int main()
 {
+    {
     Animal  *zoo[4];
 
     // for (int i = 0; i < 10; i++) {
@@ -49,14 +50,21 @@ int main()
     std::cout << "------------------------------" << std::endl;
     for (int i = 0; i < 4; i++)
         delete zoo[i];
-    
+    }
+    {
     std::cout << WHITE << std::endl << "----------- Test 2 -----------" << CYAN << std::endl;
     Cat ori;
+    ori.setBrain(0, ">> this is a random thought...");
     Cat copy (ori);
+    std::cout << std::endl << ori.getBrain(0) << std::endl << std::endl;
     std::cout << "Ori Cat Addr. : " << &ori << std::endl;
-    std::cout << "Copy Cat Addr.: " << &copy << std::endl;
+    std::cout << "Ori Cat Brain Addr. : " << &(ori.getBrain(0)) << std::endl;
+    std::cout << "Copy Cat Addr. : " << &copy << std::endl;
+    std::cout << "Copy Cat Brain Addr.: " << &(copy.getBrain(0)) << std::endl << std::endl;
+    }
 
     // std::cout << WHITE << std::endl << "----------- Test 3 -----------" << RED << std::endl;
+    // std::cout << ori.getBrain(0) << std::endl;
     // WrongCat oricat;
     // WrongCat copycat(oricat);
 

@@ -6,7 +6,7 @@
 /*   By: bhung-yi <bhung-yi@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 15:46:42 by bhung-yi          #+#    #+#             */
-/*   Updated: 2023/10/28 18:23:37 by bhung-yi         ###   ########.fr       */
+/*   Updated: 2023/10/29 19:09:53 by bhung-yi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,4 +43,17 @@ Cat &Cat::operator=(const Cat &src)
 void Cat::makeSound() const
 {
     std::cout << this->type << " says: Meow" << std::endl;
+}
+
+void    Cat::setBrain(int i, std::string idea)
+{
+    if (i >= 0 && i < 100)
+        this->brain->setIdea(i, idea);
+    else
+        return;
+}
+
+const std::string &Cat::getBrain(int i) const
+{
+    return (this->brain->getIdea(i));
 }
