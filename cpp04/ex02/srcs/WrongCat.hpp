@@ -23,7 +23,7 @@ class WrongCat : public Animal
         ~WrongCat();
         WrongCat(const WrongCat &src);
         WrongCat &operator=(const WrongCat &rhs);
-        void makeSound() const;
+        // void makeSound() const;
 
         bool compareBrainAddresses(const WrongCat& other) const {
         return (this->brain->getIdeasAddress() != other.brain->getIdeasAddress());

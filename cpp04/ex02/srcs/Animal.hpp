@@ -6,7 +6,7 @@
 /*   By: bhung-yi <bhung-yi@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 03:02:18 by bhung-yi          #+#    #+#             */
-/*   Updated: 2023/10/28 17:29:22 by bhung-yi         ###   ########.fr       */
+/*   Updated: 2023/10/29 19:16:56 by bhung-yi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class Animal
         Animal &operator=(const Animal &src);
         std::string    getType() const;
 
-        virtual void makeSound() const;
+        virtual void makeSound() const = 0;
         
     protected:
         std::string type;

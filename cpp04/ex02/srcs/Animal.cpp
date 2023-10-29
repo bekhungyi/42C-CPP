@@ -6,7 +6,7 @@
 /*   By: bhung-yi <bhung-yi@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 03:02:10 by bhung-yi          #+#    #+#             */
-/*   Updated: 2023/10/28 16:33:40 by bhung-yi         ###   ########.fr       */
+/*   Updated: 2023/10/29 19:17:03 by bhung-yi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ std::string Animal::getType() const
     return (this->type);
 }
 
-void Animal::makeSound() const
-{
-    std::cout << this->type << " made an unknown sound..." << std::endl;
-}
+// void Animal::makeSound() const
+// {
+//     std::cout << this->type << " made an unknown sound..." << std::endl;
+// }

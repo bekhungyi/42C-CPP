@@ -40,7 +40,7 @@ WrongCat &WrongCat::operator=(const WrongCat &src)
     return (*this);
 }
 
-void WrongCat::makeSound() const
-{
-    std::cout << this->type << " says: Meow" << std::endl;
-}
+// void WrongCat::makeSound() const
+// {
+//     std::cout << this->type << " says: Meow" << std::endl;
+// }
