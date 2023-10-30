@@ -6,7 +6,7 @@
 #    By: bhung-yi <bhung-yi@student.42kl.edu.my>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/13 15:27:20 by bhung-yi          #+#    #+#              #
-#    Updated: 2023/10/29 19:36:33 by bhung-yi         ###   ########.fr        #
+#    Updated: 2023/10/30 16:27:17 by bhung-yi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ GREEN	= \033[0;32m
 WHITE	= \033[0;37m
 
 NAME	= run
-SRC 	= main AMateria ICharacter
+SRC 	= main AMateria ICharacter Character Ice Cure MateriaSource IMateriaSource
 
 CC		= g++
 FLAGS	= -Wall -Wextra -Werror -std=c++98 -pedantic -fsanitize=address
@@ -28,7 +28,7 @@ OPATH	= objs/
 OBJS	= $(addprefix $(OPATH), $(addsuffix .o, $(SRC)))
 
 $(OPATH)%.o: $(SPATH)%.cpp
-	$(CC) $(FLAGS) -c $< -o $@
+	$(CC) $(FLAGS) $(HPP) -c $< -o $@
 
 all: $(NAME)
 	@echo "$(GREEN)Executable: $(NAME) is created$(WHITE)"
