@@ -6,7 +6,7 @@
 /*   By: bhung-yi <bhung-yi@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 18:54:15 by bhung-yi          #+#    #+#             */
-/*   Updated: 2023/10/16 18:58:37 by bhung-yi         ###   ########.fr       */
+/*   Updated: 2023/11/01 18:14:06 by bhung-yi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ class   HumanB {
         Weapon      *weapon;
     public:
         HumanB(std::string name);
+        HumanB(std::string name, Weapon &weapon);
         ~HumanB();
         void    attack(void);
         void    setWeapon(Weapon &weapon);

@@ -6,7 +6,7 @@
 /*   By: bhung-yi <bhung-yi@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 02:47:42 by bhung-yi          #+#    #+#             */
-/*   Updated: 2023/10/28 18:15:20 by bhung-yi         ###   ########.fr       */
+/*   Updated: 2023/11/01 15:41:03 by bhung-yi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,5 +43,6 @@ int main()
     kat.makeSound();
 
     std::cout << WHITE << std::endl << "---------- Test End ----------" << std::endl;
+    system("leaks -q main");
     return 0;
 }

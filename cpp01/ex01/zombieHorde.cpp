@@ -6,7 +6,7 @@
 /*   By: bhung-yi <bhung-yi@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 18:11:06 by bhung-yi          #+#    #+#             */
-/*   Updated: 2023/10/16 18:30:43 by bhung-yi         ###   ########.fr       */
+/*   Updated: 2023/11/01 18:50:57 by bhung-yi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,14 +26,7 @@ Zombie* zombieHorde(int n, std::string name)
     // for (int i = 0; i < n; i++)
     //     zombie[i].announce();
 
-    zombie[0].announce();
-    zombie[1].announce();
-    zombie[2].announce();
-    zombie[3].announce();
-    zombie[4].announce();
-    // zombie[5].announce();
-
-    delete[] zombie;
+    // delete[] zombie;
         
     return (zombie);
 }
