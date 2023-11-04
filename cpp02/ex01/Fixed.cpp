@@ -6,7 +6,7 @@
 /*   By: bhung-yi <bhung-yi@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 17:34:25 by bhung-yi          #+#    #+#             */
-/*   Updated: 2023/10/27 16:21:18 by bhung-yi         ###   ########.fr       */
+/*   Updated: 2023/11/01 19:03:41 by bhung-yi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 Fixed::Fixed()
 {
-    this->fixedPointValue = 0;
     std::cout << "Default constructor called" << std::endl;
+    this->fixedPointValue = 0;
 }
 
 Fixed::~Fixed()
@@ -31,14 +31,14 @@ Fixed::Fixed(const Fixed &fixed)
 
 Fixed::Fixed(const int intNum)
 {
-    this->fixedPointValue = intNum << this->fracBits;
     std::cout << "Int constructor called" << std::endl;
+    this->fixedPointValue = intNum << this->fracBits;
 }
 
 Fixed::Fixed(const float floatNum)
 {
-    this->fixedPointValue = std::roundf(floatNum * (1 << this->fracBits));
     std::cout << "Float constructor called" << std::endl;
+    this->fixedPointValue = std::roundf(floatNum * (1 << this->fracBits));
 }
 
 Fixed &Fixed::operator=(const Fixed &fixed)
