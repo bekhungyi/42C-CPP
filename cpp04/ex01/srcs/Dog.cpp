@@ -6,7 +6,7 @@
 /*   By: bhung-yi <bhung-yi@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 15:47:12 by bhung-yi          #+#    #+#             */
-/*   Updated: 2023/10/28 18:27:35 by bhung-yi         ###   ########.fr       */
+/*   Updated: 2023/11/07 15:52:11 by bhung-yi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,4 +43,17 @@ Dog &Dog::operator=(const Dog &src)
 void Dog::makeSound() const
 {
     std::cout << this->type << " says: Woof" << std::endl;
+}
+
+void    Dog::setBrain(int i, std::string idea)
+{
+    if (i >= 0 && i < 100)
+        this->brain->setIdea(i, idea);
+    else
+        return;
+}
+
+const std::string &Dog::getBrain(int i) const
+{
+    return (this->brain->getIdea(i));
 }

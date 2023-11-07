@@ -6,7 +6,7 @@
 /*   By: bhung-yi <bhung-yi@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 16:38:16 by bhung-yi          #+#    #+#             */
-/*   Updated: 2023/10/28 16:59:33 by bhung-yi         ###   ########.fr       */
+/*   Updated: 2023/11/07 15:37:19 by bhung-yi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ WrongCat &WrongCat::operator=(const WrongCat &src)
     return (*this);
 }
 
-// void WrongCat::makeSound() const
-// {
-//     std::cout << "WrongCat made a wrong meow" << std::endl;
-// }
+void WrongCat::makeSound() const
+{
+    std::cout << "WrongCat made a wrong meow" << std::endl;
+}

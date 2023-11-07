@@ -36,11 +36,24 @@ WrongCat &WrongCat::operator=(const WrongCat &src)
 {
     std::cout << "(WrongCat) Assignment operator called" << std::endl;
     this->type = src.type;
-    this->brain = src.brain; // shallow copy
+    this->brain = src.brain; // shallow copy, cos no brain when constr
     return (*this);
 }
 
 void WrongCat::makeSound() const
 {
     std::cout << this->type << " says: Meow" << std::endl;
+}
+
+void    WrongCat::setBrain(int i, std::string idea)
+{
+    if (i >= 0 && i < 100)
+        this->brain->setIdea(i, idea);
+    else
+        return;
+}
+
+const std::string &WrongCat::getBrain(int i) const
+{
+    return (this->brain->getIdea(i));
 }

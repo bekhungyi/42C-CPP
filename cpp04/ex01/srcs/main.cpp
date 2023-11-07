@@ -6,7 +6,7 @@
 /*   By: bhung-yi <bhung-yi@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 02:47:42 by bhung-yi          #+#    #+#             */
-/*   Updated: 2023/10/29 19:13:29 by bhung-yi         ###   ########.fr       */
+/*   Updated: 2023/11/07 15:54:14 by bhung-yi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,36 +37,43 @@ void testDeepCopy() {
 int main()
 {
     {
-    Animal  *zoo[4];
+        Animal  *zoo[4];
 
-    // for (int i = 0; i < 10; i++) {
-    //     zoo[i] = nullptr; // Initialize pointers to nullptr
-    // }
-    std::cout << WHITE << std::endl << "----------- Test 1 -----------" << YELLOW << std::endl;
-    for (int i = 0; i < (4/2); i++)
-        zoo[i] = new Cat();
-    for (int i = (4/2); i < 4; i++)
-        zoo[i] = new Dog();
-    std::cout << "------------------------------" << std::endl;
-    for (int i = 0; i < 4; i++)
-        delete zoo[i];
+        // for (int i = 0; i < 10; i++) {
+        //     zoo[i] = nullptr; // Initialize pointers to nullptr
+        // }
+        std::cout << WHITE << std::endl << "----------- Test 1 -----------" << YELLOW << std::endl;
+        for (int i = 0; i < (4/2); i++)
+            zoo[i] = new Cat();
+        for (int i = (4/2); i < 4; i++)
+            zoo[i] = new Dog();
+        std::cout << "------------------------------" << std::endl;
+        for (int i = 0; i < 4; i++)
+            delete zoo[i];
     }
     {
-    std::cout << WHITE << std::endl << "----------- Test 2 -----------" << CYAN << std::endl;
-    Cat ori;
-    ori.setBrain(0, ">> this is a random thought...");
-    Cat copy (ori);
-    std::cout << std::endl << ori.getBrain(0) << std::endl << std::endl;
-    std::cout << "Ori Cat Addr. : " << &ori << std::endl;
-    std::cout << "Ori Cat Brain Addr. : " << &(ori.getBrain(0)) << std::endl;
-    std::cout << "Copy Cat Addr. : " << &copy << std::endl;
-    std::cout << "Copy Cat Brain Addr.: " << &(copy.getBrain(0)) << std::endl << std::endl;
-    }
+        std::cout << WHITE << std::endl << "----------- Test 2 -----------" << CYAN << std::endl;
+        Cat ori;
+        ori.setBrain(0, ">> this is a random thought...");
+        Cat copy (ori);
 
-    // std::cout << WHITE << std::endl << "----------- Test 3 -----------" << RED << std::endl;
-    // std::cout << ori.getBrain(0) << std::endl;
-    // WrongCat oricat;
-    // WrongCat copycat(oricat);
+        std::cout << std::endl << ori.getBrain(0) << std::endl << std::endl;
+
+        std::cout << "Ori Cat Addr. : " << &ori << std::endl;
+        std::cout << "Ori Cat Brain Addr. : " << &(ori.getBrain(0)) << std::endl << std::endl;
+
+        std::cout << "Copy Cat Addr. : " << &copy << std::endl;
+        std::cout << "Copy Cat Brain Addr.: " << &(copy.getBrain(0)) << std::endl << std::endl;
+    }
+    {
+        // std::cout << WHITE << std::endl << "----------- Test 3 -----------" << RED << std::endl;
+        // WrongCat oricat;
+        // oricat.setBrain(0, "this is an idea");
+        // WrongCat copycat(oricat);
+        // std::cout << &(oricat.getBrain(0)) << std::endl;
+        // std::cout << &(copycat.getBrain(0)) << std::endl;
+
+    }
 
     std::cout << WHITE << std::endl << "---------- Test End ----------" << std::endl;
     return 0;

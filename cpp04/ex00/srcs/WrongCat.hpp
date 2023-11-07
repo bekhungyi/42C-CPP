@@ -6,7 +6,7 @@
 /*   By: bhung-yi <bhung-yi@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 16:38:14 by bhung-yi          #+#    #+#             */
-/*   Updated: 2023/10/28 16:58:41 by bhung-yi         ###   ########.fr       */
+/*   Updated: 2023/11/07 15:37:12 by bhung-yi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class WrongCat : public WrongAnimal
         WrongCat(const WrongCat &src);
         WrongCat &operator=(const WrongCat &src);
         
-        // void makeSound() const;
+        void makeSound() const;
 };
 
 #endif

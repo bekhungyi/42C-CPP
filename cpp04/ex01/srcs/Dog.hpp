@@ -6,7 +6,7 @@
 /*   By: bhung-yi <bhung-yi@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 15:44:51 by bhung-yi          #+#    #+#             */
-/*   Updated: 2023/10/28 18:20:47 by bhung-yi         ###   ########.fr       */
+/*   Updated: 2023/11/07 15:51:50 by bhung-yi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ class Dog : public Animal
         Dog &operator=(const Dog &rhs);
 
         void makeSound() const;
+        void    setBrain(int i, std::string idea);
+        const std::string &getBrain(int i) const;
     
     private:
         Brain *brain;
