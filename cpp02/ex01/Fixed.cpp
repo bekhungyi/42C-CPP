@@ -6,7 +6,7 @@
 /*   By: bhung-yi <bhung-yi@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 17:34:25 by bhung-yi          #+#    #+#             */
-/*   Updated: 2023/11/01 19:03:41 by bhung-yi         ###   ########.fr       */
+/*   Updated: 2023/11/04 20:20:09 by bhung-yi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ void Fixed::setRawBits(int const raw)
 float Fixed::toFloat( void ) const
 {
     float num;
-    num = static_cast<float>(this->fixedPointValue) / (1 << 8);
+    num = static_cast<float>(this->fixedPointValue) / (1 << this->fracBits);
 
     return (num);
 }
@@ -69,7 +69,7 @@ float Fixed::toFloat( void ) const
 int Fixed::toInt( void ) const
 {
     int num;
-    num = (this->fixedPointValue / (1 << 8));
+    num = (this->fixedPointValue / (1 << this->fracBits));
 
     return (num);
 }
